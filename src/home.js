@@ -1,4 +1,4 @@
-import { handleAddToCartClick, handleAddToWishlistClick, handleCategoryClick, handleLoadMoreBtnClick, handleProductClick, handleSearchClear, handleSearchSubmit, handleThemeToggleBtnClick, initHomePage } from "./js/handlers";
+import { handleAddToCartClick, handleAddToWishlistClick, handleBuyProductClick, handleBuyProductsClick, handleCategoryClick, handleLoadMoreBtnClick, handleProductClick, handleSearchClear, handleSearchSubmit, handleThemeToggleBtnClick, initHomePage } from "./js/handlers";
 import { closeModal } from "./js/modal";
 import { refs } from "./js/refs";
 
@@ -14,6 +14,12 @@ refs.searchClearBtn.addEventListener('click', handleSearchClear);
 refs.addToCartBtn.addEventListener('click', handleAddToCartClick);
 refs.addToWishlistBtn.addEventListener('click', handleAddToWishlistClick);
 refs.themeToggleBtn.addEventListener('click', handleThemeToggleBtnClick);
+
+document.addEventListener('click', event => {
+  if (event.target.classList.contains('modal-product__buy-btn')) {
+    handleBuyProductClick(event);
+  }
+});
 
 
 refs.scrollToTopButton.addEventListener('click', () => {

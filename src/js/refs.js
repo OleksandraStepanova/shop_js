@@ -13,6 +13,7 @@ export const refs = {
   modalProductActions: document.querySelector('.modal-product__actions'),
   addToWishlistBtn: document.querySelector('.modal-product__btn--wishlist'),
   addToCartBtn: document.querySelector('.modal-product__btn--cart'),
+  modalProductByeBtn: document.querySelector('.modal-product__buy-btn'),
 
   cartCount: document.querySelector('[data-cart-count]'),
   wishlistCount: document.querySelector('[data-wishlist-count]'),

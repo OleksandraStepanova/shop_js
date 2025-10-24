@@ -197,7 +197,12 @@ export function handleAddToWishlistClick() {
     showToast('Failed to update wishlist', 'error');
   }
 }
-
+export async function handleBuyProductClick() {
+  if (!currentProductId) return;
+  
+  showToast('Product was bought successfully', 'success');
+  
+}
 
 export async function initCartPage() {
   const savedTheme = getTheme();
